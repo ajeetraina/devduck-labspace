@@ -22,13 +22,13 @@ The system consists of three main agents orchestrated by Docker Compose, which p
 ### 🦆 DevDuck (Main Agent)
 
 - **Role**: Main development assistant and project coordinator
-- **Model**: Mistral (`ai/mistral:7B-Q4_0`)
+- **Model**: Qwen3 (unsloth/qwen3-gguf:4B-UD-Q4_K_XL)
 - **Capabilities**: Routes requests to appropriate sub-agents based on user needs
 
 ### 👨‍💻 Local Agent Agent
 
 - **Role**: General development tasks and project coordination
-- **Model**:  llama3.2 (`ai/llama3.2:1B-Q8_0`)
+- **Model**:  Qwen2.5 (ai/qwen2.5:latest)
 - **Specialization**: Node.js programming expert for understanding code, explaining concepts, and generating code snippets
 
 ### 🧠 Cerebras Agent
