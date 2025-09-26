@@ -149,6 +149,32 @@ Response: For a more detailed guide, you can refer to the AWS documentation or c
 Can you generate a Python script to perform a complex machine learning task using deep learning techniques?
 ```
 
+
+### Further Exercises:
+
+```
+@cerebras_agent create a Python script
+```
+
+```
+What services are currently running and how are agents communicating?
+```
+
+```
+Tell me more about code sandbox service?
+```
+
+```
+Can you draw a mermaid diagram and help me understad
+```
+
+```
+Show me the network configuration between devduck, local_agent, and cerebras_agent
+```
+
+
+
+
 ## Advanced Interaction Patterns
 
 ### 🎯 Context Awareness
