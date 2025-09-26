@@ -45,6 +45,9 @@ Open Docker Desktop Settings > AI > “Docker Model Runner” is enabled.
 ```bash
 docker model pull ai/llama3.2:1B-Q8_0
 docker model pull ai/mistral:7B-Q4_0
+docker model pull unsloth/qwen3-gguf:4B-UD-Q4_K_XL
+docker model pull hf.co/unsloth/qwen3-30b-a3b-instruct-2507-gguf:q5_k_m
+
 ```
 
 ### API Requirements
