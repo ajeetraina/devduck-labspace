@@ -143,6 +143,12 @@ You: Can you build a todo list app on AWS cloud
 
 Response: For a more detailed guide, you can refer to the AWS documentation or consult with the Cerebras agent for assistance with code generation and execution in a sandboxed environment.
 
+### Exercise 5. Multi-step Request
+
+```
+Can you generate a Python script to perform a complex machine learning task using deep learning techniques?
+```
+
 ## Advanced Interaction Patterns
 
 ### 🎯 Context Awareness
