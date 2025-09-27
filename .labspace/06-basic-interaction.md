@@ -127,61 +127,6 @@ You: Cerebras, can you analyze this algorithm and suggest optimizations?
 
 
 
-
-
-
-## Advanced Interaction Patterns
-
-### 🎯 Context Awareness
-
-Test how well the system maintains conversation context:
-
-#### Exercise 5: Conversational Context
-
-**Multi-turn conversation:**
-
-```
-Turn 1: "I'm working on a web application with authentication"
-Turn 2: "What security best practices should I follow?"
-Turn 3: "Can you show me how to implement JWT tokens?"
-Turn 4: "What about refresh tokens?"
-```
-
-**Observation Points:**
-- Does DevDuck remember previous context?
-- How does it maintain conversation flow?
-- Which agents contribute to different parts?
-
-### 🔄 Agent Fallback Mechanisms
-
-Test what happens when agents are unavailable:
-
-#### Exercise 6: Resilience Testing
-
-**Simulate agent failure:**
-
-```bash
-# Temporarily block Cerebras API (simulate network issues)
-# Add this to your hosts file temporarily:
-echo "127.0.0.1 api.cerebras.ai" >> /etc/hosts
-```
-
-**Then try a complex query:**
-```
-You: Analyze this complex algorithm and provide architectural recommendations for a microservices system.
-```
-
-**Observe:**
-- How does DevDuck handle the failure?
-- Does it fall back to Local Agent?
-- What error handling is displayed?
-
-**Clean up:**
-```bash
-# Remove the hosts entry
-sudo sed -i '/api.cerebras.ai/d' /etc/hosts
-```
-
 ## Next Steps
 
 In the next section, you'll dive deeper into local agent capabilities and learn how to optimize local processing for specific tasks.
