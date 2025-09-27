@@ -29,5 +29,4 @@ The skills you've learned here can be applied to various scenarios involving AI 
 
 We welcome feedback and contributions to improve this workshop. Please share your experience and suggestions for enhancement.
 
-!!! note "Coming Soon"
-    Additional resources and next steps will be added to this section.
+
