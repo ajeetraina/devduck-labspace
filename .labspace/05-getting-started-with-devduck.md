@@ -111,19 +111,6 @@ ls -la
 5. **Response**: DevDuck aggregates and returns unified response
 
 
-### Container Architecture
-
-Each component runs in its own Docker container for isolation and scalability:
-
-#### 📦 **Container Specifications**
-
-| Service | Image | CPU | Memory | Ports |
-|---------|-------|-----|---------|-------|
-| DevDuck Orchestrator | Custom Python | 0.5-1.0 | 1-2 GB | 8000 |
-| Local Agent | Custom Python | 1.0-2.0 | 2-4 GB | Internal |
-| Cerebras Agent | Custom Python | 0.2-0.5 | 512 MB | Internal |
-| MCP Gateway | docker/mcp-gateway | 0.2-0.5 | 256 MB | Internal |
-
 
 ## Environment Configuration
 
@@ -138,25 +125,6 @@ CEREBRAS_BASE_URL=https://api.cerebras.ai/v1
 CEREBRAS_CHAT_MODEL=llama-4-scout-17b-16e-instruct
 ```
 
-### Docker Compose Structure
-
-The system uses Docker Compose for orchestration:
-
-```yaml
-services:
-  devduck-agent:
-    build: ./agents
-    ports:
-      - "8000:8000"
-    environment:
-      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY}
-    depends_on:
-      - mcp-gateway
-      
-  mcp-gateway:
-    image: docker/mcp-gateway:latest
-    command: /docker-mcp gateway serve mcp-gateway-catalog.yaml
-```
 
 ### 🔍 Examine Key Files
 
@@ -230,9 +198,6 @@ docker compose up -d
 
 # Build and restart when code changes
 docker compose up --build
-
-# Force recreation of containers
-docker compose up --build --force-recreate
 ```
 
 ## Step 3: Deployment Verification
@@ -276,19 +241,6 @@ Open your web browser and navigate to:
 - [http://0.0.0.0:8000/dev-ui/?app=devduck](http://0.0.0.0:8000/dev-ui/?app=devduck)
 - [http://127.0.0.1:8000/dev-ui/?app=devduck](http://127.0.0.1:8000/dev-ui/?app=devduck)
 
-### 🧪 Initial Testing
-
-Test the system with a simple interaction:
-
-1. **Load the Interface**: Ensure the web page loads completely
-2. **Send Test Message**: Type "Hello DevDuck" in the chat interface
-3. **Verify Response**: Confirm you receive a response from the system
-4. **Check Logs**: Monitor the logs for any errors
-
-```bash
-# Watch logs during your first interaction
-docker compose logs -f devduck-agent
-```
 
 ## Step 5: System Validation
 
@@ -301,7 +253,6 @@ Run through this validation checklist:
 - [ ] Can send and receive messages
 - [ ] DevDuck orchestrator responds appropriately
 - [ ] No error messages in container logs
-
 
 
 
