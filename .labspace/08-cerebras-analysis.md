@@ -691,8 +691,3 @@ Excellent! You've mastered:
 In the next section, you'll learn about agent routing and communication patterns - how DevDuck decides which agent to use and how agents can work together on complex multi-step tasks.
 
 Ready to explore intelligent agent coordination? Let's dive in! 🤖🔄
-
----
-
-!!! tip "Pro Insight"
-    The key to effective Cerebras usage is matching the right model to the right task. Start with smaller models and scale up only when you need the additional reasoning power.
